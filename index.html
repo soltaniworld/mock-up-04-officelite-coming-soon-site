@@ -5,49 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+    <!-- font import -->
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS links-->
+    <link rel="stylesheet" href="css/main.css">
   
   <title>Frontend Mentor | Officelite coming soon site</title>
 </head>
 <body> 
-  A simple solution to complex tasks is coming soon
-
-  Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new 
-  collaboration platform built with an intuitive interface to improve productivity.
-
-  Get Started
-
-  Basic
-  Free
-  Up to 5 users for free
-  Basic document collaboration
-  2 gb storage
-  Great security and support
-  Try for Free
-
-  Pro
-  $9.99
-  Per user, billed monthly
-  All essential integrations
-  50 gb storage
-  More control and insights
-  Try for Free
-
-  Ultimate
-  $19.99
-  Per user, billed monthly
-  Robust work management
-  100 gb storage
-  VIP support
-  Try for Free
-
-  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-  Coming 4 Nov 2020
-
-  <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-  47 Days
-  07 Hours
-  56 Min
-  14 Sec
-  Get Started
+  <div class="main-container">
+    
+    <div class="intro intro-container">
+      <h1 class="intro__title">
+        A simple solution to complex tasks is coming soon
+      </h1>
+    
+      <p class="intro__para">
+        Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new 
+        collaboration platform built with an intuitive interface to improve productivity.
+      </p>
+    
+      <button class="intro__btn">Get Started</button>
+    </div>
+  
+    <div class="plans plans-container">
+      <div class="plans-plan plans-plan--free">
+        <div class="plans-plan__title">
+          Basic
+        </div>
+        <div class="plans-plan__price">
+          Free
+        </div>
+        <div class="plans-plan__user-limit">
+          Up to 5 users for free
+        </div>
+        <ul class="plans-plan__feat">
+          <li class="plans-plan__feat-item">
+            Basic document collaboration
+          </li>
+          <li class="plans-plan__feat-item">
+            2 gb storage
+          </li>
+          <li class="plans-plan__feat-item">
+            Great security and support
+          </li>
+        </ul>
+        <button class="plans-plan__btn">Try for Free</button>
+      </div>
+    
+      <div class="plans-plan plans-plan--basic">
+        <div class="plans-plan__title">
+          Pro
+        </div>
+        <div class="plans-plan__price">
+          $9.99
+        </div>
+        <div class="plans-plan__user-limit">
+          Per user, billed monthly
+        </div>
+        <ul class="plans-plan__feat">
+          <li class="plans-plan__feat-item">
+            All essential integrations
+          </li>
+          <li class="plans-plan__feat-item">
+            50 gb storage
+          </li>
+          <li class="plans-plan__feat-item">
+            More control and insights
+          </li>
+        </ul>
+        <button class="plans-plan__btn">Try for Free</button>
+      </div>
+    
+      <div class="plans-plan plans-plan--ultimate">
+        <div class="plans-plan__title">
+          Ultimate
+        </div>
+        <div class="plans-plan__price">
+          $19.99
+        </div>
+        <div class="plans-plan__user-limit">
+          Per user, billed monthly
+        </div>
+        <ul class="plans-plan__feat">
+          <li class="plans-plan__feat-item">
+            Robust work management
+          </li>
+          <li class="plans-plan__feat-item">
+            100 gb storage
+          </li>
+          <li class="plans-plan__feat-item">
+            VIP support
+          </li>
+        </ul>
+        <button class="plans-plan__btn">Try for Free</button>
+      </div>
+    </div>
+  
+    <div class="counter counter-container">
+      <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
+      Coming 4 Nov 2020
+    
+      <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
+      47 Days
+      07 Hours
+      56 Min
+      14 Sec
+      Get Started
+    </div>
+  </div>
 </body>
 </html>
