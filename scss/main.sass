@@ -1,0 +1,111 @@
+// || VARIABLES
+@import 'variables.sass'
+$mobile_fwidth_less_padding: calc(375px - 48px)
+    
+// || TYPOGRAPHY
+*
+    font-family: 'Kumbh Sans', sans-serif
+    font-size: 16px
+    font-weight: 400
+    line-height: 28px
+    letter-spacing: 0px
+    text-align: center
+    margin: 0
+    padding: 0
+    list-style: none outside none
+    box-sizing: border-box
+
+.main-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    > * //all direct children of container
+        width: $mobile_fwidth_less_padding
+
+.intro
+    margin-top: 24px
+    &-container
+        margin-top: 64px
+        margin-bottom: 0
+    &__title
+        margin-top: 0
+        font-size: 40px
+        font-weight: bold
+        line-height: 48px
+    &__para
+        line-height: 26px
+    &__btn 
+        margin-bottom: 100px
+.btn
+    width: 171px
+    height: 56px
+    border-radius: 28px
+    border: none
+    font-size: 16px
+    font-weight: bold
+    line-height: 28px
+
+    
+.plans
+    &-plan
+        display: flex
+        flex-direction: column
+        align-items: center
+        border: 1px solid #000
+        border-radius: 13px
+        height: 508px
+        margin-bottom: 32px
+        &__title
+            margin: 40px 0
+            font-size: 20px
+            font-weight: bold
+            line-height: 28px
+        &__price
+            margin-bottom: 8px
+            font-size: 56px
+            font-weight: bold
+            line-height: 64px
+        &__user-limit
+            margin-bottom: 56px
+        &__feat
+            &-item
+                margin-bottom: 16px
+                &:last-child
+                    margin-bottom: 32px
+        &__btn
+
+
+
+// BACKGROUND
+.bg-container
+    position: relative
+    z-index: -10
+.bg
+    position: absolute
+    &--light
+        width: 100vh
+        height: 1685px
+        opacity: .2
+        background: #000
+    &--dark
+        top: 1685px
+        width: 100vh
+        height: 1248px
+        opacity: .5
+        background: #000
+// SVG/ LOGO/ ILLUSTRATIONS
+.svg
+    // border: 1px solid #000
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: contain
+    &-logo
+        margin-top: 46px
+        width: 155px
+        height: 30px
+        background-image: url('../../assets/shared/logo.svg')
+    &-illustration-charts
+        margin-top: 80px
+        width: 171px
+        height: 192px
+        background-image: url('../../assets/home/illustration-charts.svg')
