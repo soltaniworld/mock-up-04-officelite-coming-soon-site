@@ -6,6 +6,7 @@ $mobile_fwidth_less_padding: calc(375px - 48px)
 *
     font-family: 'Kumbh Sans', sans-serif
     font-size: 16px
+    color: $grey_light
     font-weight: 400
     line-height: 28px
     letter-spacing: 0px
@@ -15,27 +16,7 @@ $mobile_fwidth_less_padding: calc(375px - 48px)
     list-style: none outside none
     box-sizing: border-box
 
-.main-container
-    display: flex
-    flex-direction: column
-    align-items: center
-    > * //all direct children of container
-        width: $mobile_fwidth_less_padding
-
-.intro
-    margin-top: 24px
-    &-container
-        margin-top: 64px
-        margin-bottom: 0
-    &__title
-        margin-top: 0
-        font-size: 40px
-        font-weight: bold
-        line-height: 48px
-    &__para
-        line-height: 26px
-    &__btn 
-        margin-bottom: 100px
+// Button layout
 .btn
     width: 171px
     height: 56px
@@ -44,37 +25,6 @@ $mobile_fwidth_less_padding: calc(375px - 48px)
     font-size: 16px
     font-weight: bold
     line-height: 28px
-
-    
-.plans
-    &-plan
-        display: flex
-        flex-direction: column
-        align-items: center
-        border: 1px solid #000
-        border-radius: 13px
-        height: 508px
-        margin-bottom: 32px
-        &__title
-            margin: 40px 0
-            font-size: 20px
-            font-weight: bold
-            line-height: 28px
-        &__price
-            margin-bottom: 8px
-            font-size: 56px
-            font-weight: bold
-            line-height: 64px
-        &__user-limit
-            margin-bottom: 56px
-        &__feat
-            &-item
-                margin-bottom: 16px
-                &:last-child
-                    margin-bottom: 32px
-        &__btn
-
-
 
 // BACKGROUND
 .bg-container
@@ -85,14 +35,143 @@ $mobile_fwidth_less_padding: calc(375px - 48px)
     &--light
         width: 100vh
         height: 1685px
-        opacity: .2
-        background: #000
+        background-color: $bg_ceramic_white
     &--dark
         top: 1685px
         width: 100vh
         height: 1248px
-        opacity: .5
-        background: #000
+        background: $grey_charcoal
+
+.main-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    > * //all direct children of container
+        width: $mobile_fwidth_less_padding
+
+// INTRODUCTION information
+.intro
+    margin-top: 24px
+    &-container
+        margin-top: 64px
+        margin-bottom: 0
+    &__title
+        margin-top: 0
+        font-size: 40px
+        font-weight: bold
+        line-height: 48px
+        color: $grey_navy
+    &__para
+        line-height: 26px
+        color: $grey_light
+    &__btn 
+        margin-bottom: 100px
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+        box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.247159)
+        background-color: $blue_royal
+        color: #fff
+// Plans Cards and layout
+.plans
+    &-plan
+        display: flex
+        flex-direction: column
+        align-items: center
+        // border: 1px solid #000
+        border-radius: 13px
+        height: 508px
+        margin-bottom: 32px
+        background-color: #fff
+        &--basic
+            background-color: $blue_royal
+        &__title
+            margin: 40px 0
+            font-size: 20px
+            font-weight: bold
+            line-height: 28px
+            color: $grey_navy
+            &--basic
+                color: #fff
+        &__price
+            margin-bottom: 8px
+            font-size: 56px
+            font-weight: bold
+            line-height: 64px
+            color: $grey_navy
+            &--basic
+                color: #fff
+        &__user-limit
+            margin-bottom: 56px
+            color: $grey_navy
+            &--basic
+                color: #fff
+        &__feat
+            &-item
+                margin-bottom: 16px
+                &--basic
+                    color: #fff
+                &:last-child
+                    margin-bottom: 32px
+        &__btn
+            background-color: $blue_royal--light
+            color: $blue_royal
+            &--basic
+                background-color: #fff
+                color: $blue_royal
+
+// COUNTER
+.counter
+    &-container
+        margin-top: 100px
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__title
+        width: 100%
+        height: 48px
+        font-weight: bold
+        line-height: 48px
+        text-align: center
+        letter-spacing: 5px
+        margin-bottom: 18px
+        color: #fff
+        text-transform: uppercase
+        &--date
+            color: $blue_royal
+    &__inner-container
+        margin-bottom: 40px
+        width: 328px
+        height: 92px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    &-digits
+        &-container
+            width: 72px
+            height: 92px
+            background-color: $grey_navy
+            border-radius: 4px
+            display: flex
+            flex-direction: column
+            align-items: center
+        &__number
+            color: #ffffff
+            font-weight: bold
+            font-size: 32px
+            line-height: 48px
+            text-align: center
+            margin-top: 11px
+        &__label
+            color: #ffffff
+            opacity: 0.5
+            font-weight: bold
+            font-size: 12px
+            line-height: 28px
+            text-transform: lowercase
+    &__btn
+        background-color: $blue_royal
+        color: #fff
+            
+
 // SVG/ LOGO/ ILLUSTRATIONS
 .svg
     // border: 1px solid #000

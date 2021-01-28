@@ -62,27 +62,27 @@
       </div>
     
       <div class="plans-plan plans-plan--basic">
-        <div class="plans-plan__title">
+        <div class="plans-plan__title plans-plan__title--basic">
           Pro
         </div>
-        <div class="plans-plan__price">
+        <div class="plans-plan__price plans-plan__price--basic">
           $9.99
         </div>
-        <div class="plans-plan__user-limit">
+        <div class="plans-plan__user-limit plans-plan__user-limit--basic">
           Per user, billed monthly
         </div>
-        <ul class="plans-plan__feat">
-          <li class="plans-plan__feat-item">
+        <ul class="plans-plan__feat plans-plan__feat--basic">
+          <li class="plans-plan__feat-item plans-plan__feat-item--basic">
             All essential integrations
           </li>
-          <li class="plans-plan__feat-item">
+          <li class="plans-plan__feat-item plans-plan__feat-item--basic">
             50 gb storage
           </li>
-          <li class="plans-plan__feat-item">
+          <li class="plans-plan__feat-item plans-plan__feat-item--basic">
             More control and insights
           </li>
         </ul>
-        <button class="plans-plan__btn btn">Try for Free</button>
+        <button class="plans-plan__btn plans-plan__btn--basic btn">Try for Free</button>
       </div>
     
       <div class="plans-plan plans-plan--ultimate">
@@ -112,15 +112,46 @@
   
     <div class="counter counter-container">
       <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-      Coming 4 Nov 2020
+      <div class="counter counter__title">
+        Coming <span class="counter__title counter__title--date">4 Nov 2021</span>
+      </div>
     
       <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-      47 Days
-      07 Hours
-      56 Min
-      14 Sec
-      Get Started
+      <div class="counter__inner-container">
+        <div class="counter-digits-container">
+          <div class="counter-digits__number">
+            47
+          </div> <div class="counter-digits__label">
+            Days
+          </div>
+        </div>
+        <div class="counter-digits-container">
+          <div class="counter-digits__number">
+            07
+          </div> <div class="counter-digits__label">
+            Hours
+          </div>
+        </div>
+        <div class="counter-digits-container">
+          <div class="counter-digits__number">
+            56
+          </div> <div class="counter-digits__label">
+            Min
+          </div>
+        </div>
+        <div class="counter-digits-container">
+          <div class="counter-digits__number">
+            14
+          </div> <div class="counter-digits__label">
+            Sec
+          </div>
+        </div>
+      </div>
+      <button class="counter btn counter__btn">
+        Get Started
+      </button>
     </div>
+    
   </div>
 </body>
 </html>
