@@ -22,6 +22,12 @@
   line-height: 28px;
 }
 
+.box {
+  background: #000;
+  width: 100px;
+  height: 100px;
+}
+
 .bg-container {
   position: relative;
   z-index: -10;
@@ -92,6 +98,10 @@
   height: 508px;
   margin-bottom: 32px;
   background-color: #fff;
+}
+
+.plans-plan:last-child {
+  margin-bottom: 0;
 }
 
 .plans-plan--basic {

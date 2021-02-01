@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 
-    <!-- font import -->
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <!-- CSS links-->
-    <link rel="stylesheet" href="dist/css/main.css">
-    <script src="dist/scripts/main.js" defer></script>
-  
+  <!-- font import -->
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- CSS links-->
+  <link rel="stylesheet" href="dist/css/main.css">
+  <script src="dist/components/counter.js" ></script>
+  <script src="dist/scripts/main.js" defer></script>
+
   <title>Frontend Mentor | Officelite coming soon site</title>
 </head>
-<body> 
+
+<body>
   <div class="bg-container">
     <div class="bg bg--light"></div>
     <div class="bg bg--dark"></div>
   </div>
 
   <div class="main-container">
+
     <div class="svg svg-logo"> </div>
     <div class="svg svg-illustration-charts"></div>
-    
+
     <div class="intro intro-container">
       <h1 class="intro intro__title">
         A simple solution to complex tasks is coming soon
       </h1>
-    
+
       <p class="intro intro__para">
-        Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new 
+        Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new
         collaboration platform built with an intuitive interface to improve productivity.
       </p>
-    
+
       <button class="intro intro__btn btn">Get Started</button>
     </div>
-  
+
     <div class="plans plans-container">
       <div class="plans-plan plans-plan--free">
         <div class="plans-plan__title">
@@ -61,7 +65,7 @@
         </ul>
         <button class="plans-plan__btn btn">Try for Free</button>
       </div>
-    
+
       <div class="plans-plan plans-plan--basic">
         <div class="plans-plan__title plans-plan__title--basic">
           Pro
@@ -85,7 +89,7 @@
         </ul>
         <button class="plans-plan__btn plans-plan__btn--basic btn">Try for Free</button>
       </div>
-    
+
       <div class="plans-plan plans-plan--ultimate">
         <div class="plans-plan__title">
           Ultimate
@@ -110,49 +114,18 @@
         <button class="plans-plan__btn btn">Try for Free</button>
       </div>
     </div>
-  
+
     <div class="counter counter-container">
       <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
       <div class="counter counter__title">
         Coming <span class="counter__title counter__title--date">4 Nov 2021</span>
       </div>
-    
-      <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-      <div class="counter__inner-container">
-        <div class="counter-digits-container">
-          <div class="counter-digits__number days">
-            47
-          </div> <div class="counter-digits__label">
-            Days
-          </div>
-        </div>
-        <div class="counter-digits-container">
-          <div class="counter-digits__number hours">
-            07
-          </div> <div class="counter-digits__label">
-            Hours
-          </div>
-        </div>
-        <div class="counter-digits-container">
-          <div class="counter-digits__number mins">
-            56
-          </div> <div class="counter-digits__label">
-            Min
-          </div>
-        </div>
-        <div class="counter-digits-container">
-          <div class="counter-digits__number secs">
-            14
-          </div> <div class="counter-digits__label">
-            Sec
-          </div>
-        </div>
-      </div>
-      <button class="counter btn counter__btn">
-        Get Started
-      </button>
+      <!-- Custom element for counter -->
+      <counter-component> </counter-component>
+      <button class="counter btn counter__btn"> Get Started </button>
     </div>
-    
+
   </div>
 </body>
+
 </html>
