@@ -9,33 +9,99 @@
 
   <!-- font import -->
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- font import -->
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <!-- CSS links-->
-  <link rel="stylesheet" href="css/main.css">
-    <title>Frontend Mentor | Officelite coming soon site</title>
+  <link rel="stylesheet" href="dist/css/main.css">
+  <!-- Scripts -->
+  <script src="dist/scripts/main.js" defer></script>
+  <script src="dist/scripts/dropdownmenu.js" defer></script>
+  <!-- Components -->
+  <script src="dist/components/counter.js"></script>
+  <script src="dist/components/bwbg.js"></script>
+    <title>Officelite coming soon site</title>
 </head>
 <body>
-  Work smarter. Save time.
+  <bwbg-component></bwbg-component>
+  <div class="main-container">
 
-  Easily manage your projects. Get on the list and receive in-app perks available only to 
-  early subscribers. We are moving into final development and getting ready for official launch soon.
+    <div class="svg svg-logo"> </div>
+    
+    <h1>
+      Work smarter. Save time.
+    </h1>
 
-  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-  Coming 4 Nov 2020
+    <p>
+      Easily manage your projects. Get on the list and receive in-app perks available only to 
+      early subscribers. We are moving into final development and getting ready for official launch soon.
+    </p>
 
-  <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-  47 Days
-  07 Hours
-  56 Min
-  14 Sec
+  <!-- Custom element for counter -->
+    <div class="counter counter-container counter--sign-up">
+      <counter-component> </counter-component>
+    </div>
 
-  Name
-  Email Address
-  Basic Pack Free
-  Basic Pack Free
-  Pro Pack $9.99
-  Ultimate Pack $19.99
-  Phone Number
-  Company
-  Get on the list
+
+    <div class="card card--input">
+      <form action="/" method="POST" class="input__form">
+
+        <div class="input input__name">
+          <label for="#name" class="sr-only input__name input__name--label">Name</label>
+          <input type="text" placeholder="Name" name="name" id="name" class="input__element input__name input__name--input">
+        </div>
+
+        <div class="input input__email">
+          <label for="#email" class="sr-only input__email input__email--label">Email Address</label>
+          <input type="email" name="email" id="email" class="input__element input__email input__email--input" placeholder="Email Address">
+        </div>
+
+        <div class="input input__plan">
+            <div class="select-container">
+
+              <div class="select-opt select-selected" data-plan="basic">
+              </div>
+              <div class="arrow arrow--up"></div>
+
+              <div class="select-options hide">
+                <div class="select-opt select-opt1" data-plan="basic">
+                  <div class="select-text">
+                    <span class="select-title">Basic Pack </span>
+                    <span class="select-price">Free</span>
+                  </div>
+                </div>
+                <div class="select-opt select-opt2" data-plan="pro">
+                  <div class="select-text">
+                    <span class="select-title">Pro Pack </span>
+                    <span class="select-price">$9.99</span>
+                  </div>
+                </div>
+                <div class="select-opt select-opt3" data-plan="ultimate">
+                  <div class="select-text">
+                    <span class="select-title">Ultimate Pack </span>
+                    <span class="select-price">$19.99</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="input input__phonenumber">
+          <label for="#phonenumber" class="sr-only input__phonenumber input__phonenumber--label">Phone Number</label>
+          <input type="tel" name="phonenumber" id="phonenumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="input__element input__phonenumber input__phonenumber--input" placeholder="Phone Number">
+        </div>
+
+        <div class="input input__company">
+          <label for="#company" class="sr-only input__company input__company--label">Company</label>
+          <input type="text" name="company" id="company" class="input__element input__company input__company--input" placeholder="Company">
+        </div>
+
+        <div class="input input__submit">
+          <button type="submit" class="btn input__submit-btn">Get on the list</button>
+        </div>
+      
+      </form>
+    </div>
+
+  </div>
 </body>
 </html>

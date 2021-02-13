@@ -11,20 +11,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <!-- CSS links-->
   <link rel="stylesheet" href="dist/css/main.css">
+  <!-- Scripts -->
+  <script src="dist/scripts/main.js" defer></script>
+  <!-- Components -->
   <script src="dist/components/counter.js" ></script>
   <script src="dist/components/bwbg.js" ></script>
-  <script src="dist/scripts/main.js" defer></script>
 
-  <title>Frontend Mentor | Officelite coming soon site</title>
+  <title>Officelite coming soon site</title>
 </head>
 
 <body>
   <bwbg-component></bwbg-component>
-
-  <!-- <div class="bg-container">
-    <div class="bg bg--light"></div>
-    <div class="bg bg--dark"></div>
-  </div> -->
 
   <div class="main-container">
 
@@ -41,11 +38,12 @@
         collaboration platform built with an intuitive interface to improve productivity.
       </p>
 
-      <button class="intro intro__btn btn">Get Started</button>
+      <a href="./sign-up.html" class="intro intro__btn btn">Get Started</a>
     </div>
 
     <div class="plans plans-container">
-      <div class="plans-plan plans-plan--free">
+
+      <div class="card plans-plan plans-plan--free">
         <div class="plans-plan__title">
           Basic
         </div>
@@ -66,10 +64,10 @@
             Great security and support
           </li>
         </ul>
-        <button class="plans-plan__btn btn">Try for Free</button>
+        <a href="./sign-up.html" class="plans-plan__btn btn">Try for Free</a>
       </div>
 
-      <div class="plans-plan plans-plan--basic">
+      <div class="card plans-plan plans-plan--basic">
         <div class="plans-plan__title plans-plan__title--basic">
           Pro
         </div>
@@ -90,10 +88,10 @@
             More control and insights
           </li>
         </ul>
-        <button class="plans-plan__btn plans-plan__btn--basic btn">Try for Free</button>
+        <a href="./sign-up.html" class="plans-plan__btn plans-plan__btn--basic btn">Try for Free</a>
       </div>
 
-      <div class="plans-plan plans-plan--ultimate">
+      <div class="card plans-plan plans-plan--ultimate">
         <div class="plans-plan__title">
           Ultimate
         </div>
@@ -114,18 +112,14 @@
             VIP support
           </li>
         </ul>
-        <button class="plans-plan__btn btn">Try for Free</button>
+        <a href="./sign-up.html" class="plans-plan__btn btn">Try for Free</a>
       </div>
     </div>
 
+    <!-- Custom element for counter -->
     <div class="counter counter-container">
-      <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-      <div class="counter counter__title">
-        Coming <span class="counter__title counter__title--date">4 Nov 2021</span>
-      </div>
-      <!-- Custom element for counter -->
       <counter-component> </counter-component>
-      <button class="counter btn counter__btn"> Get Started </button>
+      <a href="./sign-up.html" class="counter btn counter__btn"> Get Started </a>
     </div>
 
   </div>

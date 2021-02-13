@@ -1,8 +1,10 @@
-// Get date of launch from HTML
-const dateFromHTML = document.querySelector(".counter__title--date").innerHTML;
+//Set Due Date and Due Time
+dueDate = "4 Nov 2021"
+dueTime = "0:0:0"
+document.querySelector(".counter__title--date").innerHTML = dueDate;
 
 //Set date to countdown to, time now, and time left
-const countDownDate = new Date(dateFromHTML +' 0:0:0');
+const countDownDate = new Date(dueDate + " "+ dueTime);
 let now = new Date().getTime();
 let timeleft = countDownDate - now;
 

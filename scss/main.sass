@@ -3,7 +3,9 @@
 $mobile_fwidth_less_padding: calc(375px - 48px)
     
 // || TYPOGRAPHY
-*
+*,
+*::before,
+*::after
     font-family: 'Kumbh Sans', sans-serif
     font-size: 16px
     color: $grey_light
@@ -18,6 +20,9 @@ $mobile_fwidth_less_padding: calc(375px - 48px)
 
 // Button layout
 .btn
+    // reset all anchor tag styling
+    text-decoration: none
+    // button styling
     width: 171px
     height: 56px
     border-radius: 28px
@@ -25,11 +30,16 @@ $mobile_fwidth_less_padding: calc(375px - 48px)
     font-size: 16px
     font-weight: bold
     line-height: 28px
+    display: flex
+    justify-content: center
+    align-items: center
+    &:hover
+        // reset all anchor tag styling
+        text-decoration: none
+    &:visited
+        // reset all anchor tag styling
+        text-decoration: none
 
-.box
-    background: #000
-    width: 100px
-    height: 100px
 // BACKGROUND
 .bg-container
     position: relative
@@ -53,6 +63,16 @@ $mobile_fwidth_less_padding: calc(375px - 48px)
     > * //all direct children of container
         width: $mobile_fwidth_less_padding
 
+//TYPOGRAPHY
+h1
+    font-size: 40px
+    font-weight: bold
+    line-height: 48px
+    color: $grey_navy
+p
+    color: $grey_light
+    line-height: 26px
+
 // INTRODUCTION information
 .intro
     margin-top: 24px
@@ -61,30 +81,31 @@ $mobile_fwidth_less_padding: calc(375px - 48px)
         margin-bottom: 0
     &__title
         margin-top: 0
-        font-size: 40px
-        font-weight: bold
-        line-height: 48px
-        color: $grey_navy
     &__para
-        line-height: 26px
-        color: $grey_light
     &__btn 
-        margin-bottom: 100px
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
         box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.247159)
         background-color: $blue_royal
         color: #fff
-// Plans Cards and layout
+        margin: auto
+        margin-top: 24px
+        margin-bottom: 100px
+
+// Cards template
+.card
+    display: flex
+    flex-direction: column
+    align-items: center
+    border-radius: 13px
+    background-color: #fff
+    &--input
+        padding: 24px
+
+// Plans tempalte
 .plans
     &-plan
-        display: flex
-        flex-direction: column
-        align-items: center
-        // border: 1px solid #000
-        border-radius: 13px
         height: 508px
         margin-bottom: 32px
-        background-color: #fff
         &:last-child
             margin-bottom: 0
         &--basic
@@ -123,6 +144,104 @@ $mobile_fwidth_less_padding: calc(375px - 48px)
             &--basic
                 background-color: #fff
                 color: $blue_royal
+// Signup Form Tempalte
+.input
+    margin: 0
+    padding: 0
+    width: 100%
+    margin-bottom: 24px
+    &__form
+        width: 100%
+    &__element
+        position: relative
+        width: 100%
+        height: 45px
+        border: none
+        border-bottom: 1px solid $grey_light
+        &::placeholder
+            color: $grey_light
+            font-weight: 400
+            line-height: 28px
+            font-size: 16px
+            opacity: 0.5
+            text-align: left
+            padding-left: 16px
+            text-transform: capitalize
+    &__email
+        margin-bottom: 0
+    &__company
+        margin-bottom: 40px
+        &--input
+            margin-bottom: 0
+    &__submit
+        margin-bottom: 0
+    &__submit-btn
+        width: 100%
+        border-bottom: none
+        background-color: $blue_royal
+        color: #fff
+
+//Custom Dropdown Menu
+$height_of_options: 68px
+.select
+    &-selected
+        position: relative
+    &-container
+        width: 100%
+        position: relative
+    &-options
+        width: 279px
+        position: absolute
+        z-index: 10
+        top: 0
+        background-color: #fff
+        border: 1px solid rgba(51, 57, 80, 0.153273)
+        box-sizing: border-box
+        box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.747077)
+        border-radius: 8px
+        overflow: hidden
+        height: $height_of_options*3
+        transition-duration: .5s
+        opacity: 1
+        top: $height_of_options + 24px
+
+    &-opt
+        border-bottom: 1px solid $grey_light
+        text-align: left
+        width: 279px
+        height: $height_of_options
+        position: relative
+    &-opt3 
+        border: none
+    &-text
+        font-weight: 700
+        position: absolute
+        left: 16px
+        bottom: 8px
+    &-title
+        margin-right: 8px
+        color: $grey_navy
+        font-weight: inherit
+    &-price
+        font-weight: inherit
+
+.hide
+    opacity: 0
+    border: 0px solid black
+    height: 0px
+
+.highlight
+    position: relative
+    &:hover
+        background-color: $blue_royal
+//Hidden Labels
+.sr-only
+    position: absolute
+    left: -10000px
+    top: auto
+    width: 1px
+    height: 1px
+    overflow: hidden
 
 // COUNTER
 .counter
@@ -131,6 +250,7 @@ $mobile_fwidth_less_padding: calc(375px - 48px)
         display: flex
         flex-direction: column
         align-items: center
+        position: relative
     &__title
         width: 100%
         height: 48px
@@ -177,7 +297,20 @@ $mobile_fwidth_less_padding: calc(375px - 48px)
         background-color: $blue_royal
         color: #fff
             
-
+// Sign-up counter style
+.counter--sign-up
+    .counter
+        &__title
+            color: $grey_navy
+            &--date
+                color: $blue_royal
+        &-digits
+            &-container
+                background-color: $blue_royal--light
+            &__number
+                color: $blue_royal
+            &__label
+                color: $grey_navy
 // SVG/ LOGO/ ILLUSTRATIONS
 .svg
     // border: 1px solid #000
@@ -186,11 +319,26 @@ $mobile_fwidth_less_padding: calc(375px - 48px)
     background-size: contain
     &-logo
         margin-top: 46px
+        margin-bottom: 80px
         width: 155px
         height: 30px
         background-image: url('../../assets/shared/logo.svg')
     &-illustration-charts
-        margin-top: 80px
         width: 171px
         height: 192px
         background-image: url('../../assets/home/illustration-charts.svg')
+.arrow
+    position: absolute
+    border: 2px solid #5175FF
+    border-bottom: none
+    border-right: none
+    width: 7px
+    height: 7px
+    right: 24px
+    bottom: 19px
+    transition-duration: 0.5s
+    &--up
+        transform: rotate(45deg)
+    &--down
+        transform: rotate(225deg)
+

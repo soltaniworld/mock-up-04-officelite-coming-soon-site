@@ -4,6 +4,9 @@ class Counter extends HTMLElement {
     }
     connectedCallback() {
         this.innerHTML = `
+      <div class="counter counter__title">
+        Coming <span class="counter__title counter__title--date">4 Nov 2021</span>
+      </div>
       <div class="counter__inner-container">
         <div class="counter-digits-container">
           <div class="counter-digits__number days">
