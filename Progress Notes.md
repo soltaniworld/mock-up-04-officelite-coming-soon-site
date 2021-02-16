@@ -4,3 +4,5 @@
 -add checkmark using JS to selected plan
 -add SVG backgrounds to BG
 -check text size for tablet
+-re-write mixin/ responsive elements for each container
+    -insteadof changing each element, make a section for tablet size, and re-add class names
