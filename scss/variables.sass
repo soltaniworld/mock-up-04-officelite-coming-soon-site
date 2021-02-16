@@ -12,3 +12,17 @@ $bg_ceramic_white: #f2f2f2
 $select_border: #777777
 $select_focus: blue
 $select_arrow: #159
+
+
+// ---- MIXINS ----
+
+// Set media query for screen size with minimum width for desktop
+$desktopMinW: 1440px
+$tabletMinW: 766px
+@mixin setDesktop
+  @media screen and ( min-width: $desktopMinW)
+    @content
+
+@mixin setTablet
+  @media screen and ( min-width: $tabletMinW) and ( max-width: $desktopMinW - 1px)
+    @content

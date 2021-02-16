@@ -62,10 +62,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 24px;
 }
 
-.main-container > * {
-  width: calc(375px - 48px);
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .main-container {
+    padding-top: 206px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 h1 {
@@ -81,16 +86,49 @@ p {
 }
 
 .intro {
-  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .intro-container {
-  margin-top: 64px;
+  width: 327px;
   margin-bottom: 0;
 }
 
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .intro-container {
+    width: 689px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .intro__article {
+    width: 345px;
+  }
+}
+
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .intro__figure {
+    width: 289px;
+  }
+}
+
 .intro__title {
-  margin-top: 0;
+  margin-top: 64px;
+}
+
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .intro__title {
+    margin-top: 0;
+  }
+}
+
+.intro__para {
+  margin-top: 24px;
 }
 
 .intro__btn {
@@ -101,6 +139,14 @@ p {
   margin: auto;
   margin-top: 24px;
   margin-bottom: 100px;
+  width: 171px;
+}
+
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .intro {
+    text-align: left;
+    margin-left: 0;
+  }
 }
 
 .card {
@@ -109,6 +155,13 @@ p {
   align-items: center;
   border-radius: 13px;
   background-color: #fff;
+  width: 327px;
+}
+
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .card {
+    width: 689px;
+  }
 }
 
 .card--input {
@@ -118,6 +171,7 @@ p {
 .plans-plan {
   height: 508px;
   margin-bottom: 32px;
+  position: relative;
 }
 
 .plans-plan:last-child {
@@ -140,6 +194,15 @@ p {
   color: #fff;
 }
 
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .plans-plan__title {
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    margin: 0;
+  }
+}
+
 .plans-plan__price {
   margin-bottom: 8px;
   font-size: 56px;
@@ -152,6 +215,15 @@ p {
   color: #fff;
 }
 
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .plans-plan__price {
+    position: absolute;
+    top: 92px;
+    left: 48px;
+    margin: 0;
+  }
+}
+
 .plans-plan__user-limit {
   margin-bottom: 56px;
   color: #333950;
@@ -159,6 +231,15 @@ p {
 
 .plans-plan__user-limit--basic {
   color: #fff;
+}
+
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .plans-plan__user-limit {
+    position: absolute;
+    top: 160px;
+    left: 48px;
+    margin: 0;
+  }
 }
 
 .plans-plan__feat-item {
@@ -173,6 +254,18 @@ p {
   margin-bottom: 32px;
 }
 
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .plans-plan__feat {
+    position: absolute;
+    top: 92px;
+    right: 100px;
+    margin: 0;
+  }
+  .plans-plan__feat-item {
+    text-align: left;
+  }
+}
+
 .plans-plan__btn {
   background-color: #5174ff26;
   color: #5175FF;
@@ -181,6 +274,21 @@ p {
 .plans-plan__btn--basic {
   background-color: #fff;
   color: #5175FF;
+}
+
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .plans-plan__btn {
+    position: absolute;
+    bottom: 48px;
+    left: 48px;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .plans-plan {
+    height: 316px;
+  }
 }
 
 .input {
@@ -414,10 +522,28 @@ p {
   background-image: url("../../assets/shared/logo.svg");
 }
 
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .svg-logo {
+    position: absolute;
+    top: 72px;
+    left: 39px;
+  }
+}
+
 .svg-illustration-charts {
   width: 171px;
   height: 192px;
   background-image: url("../../assets/home/illustration-charts.svg");
+}
+
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .svg-illustration-charts {
+    background-size: 108% 110%;
+    background-position-x: -10px;
+    background-position-y: 0px;
+    width: 310px;
+    height: 314px;
+  }
 }
 
 .arrow {

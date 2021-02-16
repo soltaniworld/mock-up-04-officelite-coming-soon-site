@@ -1,0 +1,6 @@
+-Need to resize counter
+-resize background for sign-up, tablet, desktop
+    -maybe use JS for this
+-add checkmark using JS to selected plan
+-add SVG backgrounds to BG
+-check text size for tablet
