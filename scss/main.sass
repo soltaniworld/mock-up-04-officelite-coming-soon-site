@@ -331,6 +331,9 @@ $height_of_options: 68px
         display: flex
         flex-direction: row
         justify-content: space-between
+        @include setTablet
+            width: 448px
+            height: 128px
     &-digits
         &-container
             width: 72px
@@ -339,7 +342,11 @@ $height_of_options: 68px
             border-radius: 4px
             display: flex
             flex-direction: column
-            align-items: center
+            // justify-content: center
+            justify-content: space-evenly
+            @include setTablet
+                width: 100px
+                height: 128px
         &__number
             color: #ffffff
             font-weight: bold
@@ -347,6 +354,9 @@ $height_of_options: 68px
             line-height: 48px
             text-align: center
             margin-top: 11px
+            @include setTablet
+                font-size: 56px
+                margin-top: 17px
         &__label
             color: #ffffff
             opacity: 0.5
@@ -354,6 +364,10 @@ $height_of_options: 68px
             font-size: 12px
             line-height: 28px
             text-transform: lowercase
+            margin-bottom: 10px
+            @include setTablet
+                font-size: 16px
+                margin-bottom: 16px
     &__btn
         background-color: $blue_royal
         color: #fff

@@ -1,4 +1,4 @@
--Need to resize counter
+-make digits on counter double digits even when theyre below 10
 -resize background for sign-up, tablet, desktop
     -maybe use JS for this
 -add checkmark using JS to selected plan

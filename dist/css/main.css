@@ -455,6 +455,13 @@ p {
   justify-content: space-between;
 }
 
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .counter__inner-container {
+    width: 448px;
+    height: 128px;
+  }
+}
+
 .counter-digits-container {
   width: 72px;
   height: 92px;
@@ -462,7 +469,14 @@ p {
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-evenly;
+}
+
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .counter-digits-container {
+    width: 100px;
+    height: 128px;
+  }
 }
 
 .counter-digits__number {
@@ -474,6 +488,13 @@ p {
   margin-top: 11px;
 }
 
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .counter-digits__number {
+    font-size: 56px;
+    margin-top: 17px;
+  }
+}
+
 .counter-digits__label {
   color: #ffffff;
   opacity: 0.5;
@@ -481,6 +502,14 @@ p {
   font-size: 12px;
   line-height: 28px;
   text-transform: lowercase;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 766px) and (max-width: 1439px) {
+  .counter-digits__label {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
 }
 
 .counter__btn {
